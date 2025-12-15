@@ -1,0 +1,121 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "title": "Phase 1: Dart 基础 (The Foundation)",
+      "description": "掌握 Dart 语言的基石，为 Flutter 开发打下坚实基础。",
+      "lessons": [
+        {
+          "id": 101,
+          "title": "变量与类型：不同形状的杯子",
+          "contentMarkdown": "# 变量与类型：不同形状的杯子\n\n想象一下，**变量**就像你家里的**收纳盒**。每个收纳盒都有一个标签（变量名），里面装着东西（变量值）。\n\n但是，你不能把水装进一个装衣服的盒子里，对吧？在 Dart 语言中，这就是**类型**的作用。不同的类型就像**不同形状的杯子**，只能装特定类型的东西。\n\n*   `int` (整数)：装整数的杯子，比如 `10`、`200`。\n*   `double` (小数)：装小数的杯子，比如 `3.14`、`9.9`。\n*   `String` (字符串)：装文字的杯子，比如 `'你好'`、`'Flearn App'`。\n*   `bool` (布尔值)：装“是”或“否”的杯子，只有 `true` 或 `false` 两种状态。",
+          "codeExample": "```dart\n// 声明一个整数变量，就像一个贴着'年龄'标签的整数杯子\nint age = 18;\n\n// 声明一个字符串变量，就像一个贴着'名字'标签的文字杯子\nString name = 'Manus';\n\n// 声明一个布尔变量，就像一个贴着'是否成年'标签的是非杯子\nbool isAdult = true;\n```",
+          "codeExplanation": "白话解说：`int age = 18;` 告诉 Dart，我要一个叫 `age` 的整数（`int`）收纳盒，里面放数字 `18`。记住，每行代码结束都要用分号 `;` 就像说话时要打句号一样。",
+          "practice": {
+            "instructions": "请声明一个名为 `score` 的整数变量，并赋值为 95。然后声明一个名为 `message` 的字符串变量，赋值为 '恭喜你'。",
+            "initialCode": "void main() {\n  // 在这里写下你的代码\n}",
+            "solutionRegex": "int\\s+score\\s*=\\s*95\\s*;\\s*String\\s+message\\s*=\\s*['\"]恭喜你['\"]\\s*;"
+          },
+          "assessment": {
+            "quiz": [
+              {
+                "question": "在 Dart 中，哪个类型最适合存储一个人的名字？",
+                "options": ["int", "double", "String", "bool"],
+                "correctAnswerIndex": 2
+              }
+            ],
+            "keywords": [
+              {"word": "int", "hint": "整数类型"},
+              {"word": "String", "hint": "文本类型"},
+              {"word": "变量", "hint": "存储数据的收纳盒"}
+            ]
+          }
+        },
+        {
+          "id": 102,
+          "title": "控制流：红绿灯的抉择",
+          "contentMarkdown": "# 控制流：红绿灯的抉择\n\n**控制流**决定了你的代码应该走哪条路。最常见的就是 `if/else` 语句，它就像一个**红绿灯**。\n\n*   **if (条件)**：如果条件为真（绿灯亮），就执行 `if` 后面的代码块。\n*   **else**：否则（红灯亮），就执行 `else` 后面的代码块。\n\n它让你的程序可以根据不同的情况做出不同的反应，是程序“思考”的关键。",
+          "codeExample": "```dart\nint lightColor = 1; // 1代表绿灯，0代表红灯\n\nif (lightColor == 1) {\n  print('通行！');\n} else {\n  print('等待！');\n}\n```",
+          "codeExplanation": "白话解说：`if (lightColor == 1)` 检查 `lightColor` 是不是等于 `1`。如果是，就打印“通行！”；否则，就打印“等待！”。注意，判断是否相等要用两个等号 `==`。",
+          "practice": null,
+          "assessment": null
+        },
+        {
+          "id": 103,
+          "title": "函数：自动贩卖机",
+          "contentMarkdown": "# 函数：自动贩卖机\n\n**函数 (Function)** 就像一台**自动贩卖机**。你投入硬币（**参数**），它吐出饮料（**返回值**）。\n\n函数的作用是把一段特定的、可重复使用的代码封装起来，让你的程序更整洁、更高效。就像你不需要每次都自己去煮咖啡，只需要按一下贩卖机的按钮。",
+          "codeExample": "```dart\n// 这是一个计算两个数之和的函数\nint add(int a, int b) {\n  return a + b;\n}\n\nvoid main() {\n  int result = add(5, 3); // 投入5和3，得到8\n  print(result);\n}\n```",
+          "codeExplanation": "白话解说：`int add(int a, int b)` 声明了一个叫 `add` 的函数，它需要两个整数（`a` 和 `b`）作为输入，并且会返回一个整数（函数名前的 `int`）。`return a + b;` 就是它执行的操作，把结果吐出来。",
+          "practice": null,
+          "assessment": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Phase 2: 面向对象 (OOP)",
+      "description": "学习如何用类和对象来组织代码，构建更复杂的应用结构。",
+      "lessons": [
+        {
+          "id": 201,
+          "title": "类与对象：设计图 vs 盖好的房子",
+          "contentMarkdown": "# 类与对象：设计图 vs 盖好的房子\n\n**类 (Class)** 就像建筑师的**设计图**，它定义了房子的结构、颜色、有几扇窗户等。它只是一个概念，不能住人。\n\n**对象 (Object)** 则是根据设计图**盖好的房子**。你可以拥有很多栋房子（对象），但它们都遵循同一张设计图（类）。对象是真实存在的，可以被使用。",
+          "codeExample": "```dart\nclass Dog {\n  String name;\n  int age;\n\n  // 构造函数，用来“盖房子”\n  Dog(this.name, this.age);\n\n  void bark() {\n    print('$name 汪汪叫！');\n  }\n}\n\nvoid main() {\n  // 根据设计图创建一个对象\n  var myDog = Dog('旺财', 3);\n  myDog.bark();\n}\n```",
+          "codeExplanation": "白话解说：`class Dog` 是设计图。`var myDog = Dog('旺财', 3);` 这一步就是根据设计图“盖”了一栋叫 `myDog` 的房子，并给它命名为“旺财”，年龄是 3 岁。",
+          "practice": null,
+          "assessment": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Phase 3: Flutter 基础",
+      "description": "进入移动应用开发的世界，用乐高积木搭建你的第一个界面。",
+      "lessons": [
+        {
+          "id": 301,
+          "title": "Widget 概念：乐高积木",
+          "contentMarkdown": "# Widget 概念：乐高积木\n\n在 Flutter 中，**一切皆是 Widget**。一个 Widget 就像一块**乐高积木**。你的整个 App 界面，无论是一个按钮、一段文字，还是整个屏幕，都是由无数个 Widget 拼搭而成的。\n\n*   **StatelessWidget**：不会改变的积木，比如一个固定的标题。\n*   **StatefulWidget**：会改变的积木，比如一个可以被点击的按钮，点击后颜色会变化。",
+          "codeExample": "```dart\nimport 'package:package:flutter/material.dart';\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Center(\n        child: Text('Hello Widget'),\n      ),\n    );\n  }\n}\n```",
+          "codeExplanation": "白话解说：`Text('Hello Widget')` 是最小的积木，用来显示文字。`Center` 是一个布局积木，用来把文字放在屏幕中央。所有的积木最终都要被 `build` 方法拼装起来。",
+          "practice": null,
+          "assessment": null
+        },
+        {
+          "id": 302,
+          "title": "布局：排队与叠罗汉",
+          "contentMarkdown": "# 布局：排队与叠罗汉\n\nFlutter 的布局主要靠 `Row` 和 `Column` 两个 Widget。\n\n*   **Row (行)**：就像**排队**，所有 Widget 都是水平（横向）排列的。\n*   **Column (列)**：就像**叠罗汉**，所有 Widget 都是垂直（纵向）堆叠的。",
+          "codeExample": "```dart\n// 水平布局 (排队)\nRow(\n  children: [\n    Icon(Icons.star), \n    Text('点赞'),\n  ],\n)\n\n// 垂直布局 (叠罗汉)\nColumn(\n  children: [\n    Text('标题'),\n    Text('副标题'),\n  ],\n)\n```",
+          "codeExplanation": "白话解说：`Row` 和 `Column` 都有一个 `children` 属性，它是一个 Widget 列表，用来放你想要排列的积木。`Row` 负责横着排，`Column` 负责竖着排。",
+          "practice": null,
+          "assessment": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Phase 4: 进阶与实战",
+      "description": "学习如何处理复杂的数据流和网络通信，让你的 App 真正动起来。",
+      "lessons": [
+        {
+          "id": 401,
+          "title": "状态管理：为什么需要 Provider/Riverpod",
+          "contentMarkdown": "# 状态管理：为什么需要 Provider/Riverpod\n\n在复杂的 App 中，数据（**状态**）需要在很多 Widget 之间共享和传递。想象一下，你有一个全局的“用户登录状态”数据，如果不用状态管理，你需要手动把这个数据从最顶层的 Widget 一层一层传给最底层的 Widget，这就像在玩**传话游戏**，既麻烦又容易出错。\n\n**Provider/Riverpod** 就像一个**中央数据中心**。任何 Widget 都可以直接向中心“订阅”它需要的数据，数据更新时，只有订阅了它的 Widget 才会自动刷新。这大大简化了数据流，让代码更清晰。",
+          "codeExample": "```dart\n// 使用 Riverpod 的一个简单计数器\nfinal counterProvider = StateProvider<int>((ref) => 0);\n\n// 在 Widget 中读取状态\nclass CounterText extends ConsumerWidget {\n  @override\n  Widget build(BuildContext context, WidgetRef ref) {\n    final count = ref.watch(counterProvider);\n    return Text('$count');\n  }\n}\n```",
+          "codeExplanation": "白话解说：`counterProvider` 是一个全局可访问的数据（状态）。`ref.watch(counterProvider)` 就像是 Widget 订阅了这个数据，一旦数据变化，这个 Widget 就会自动重建（刷新）。",
+          "practice": null,
+          "assessment": null
+        },
+        {
+          "id": 402,
+          "title": "网络请求：模拟点外卖的过程",
+          "contentMarkdown": "# 网络请求：模拟点外卖的过程\n\n**网络请求**就是你的 App 和服务器之间的通信。这就像你**点外卖**的过程：\n\n1.  **你（App）**向**外卖平台（服务器）**发送一个**订单（请求）**。\n2.  **外卖平台（服务器）**处理订单，然后给你一个**反馈（响应）**，可能是“订单成功”或“商家休息”。\n\n我们通常使用 `http` 或 `Dio` 库来完成这个过程。",
+          "codeExample": "```dart\nimport 'package:http/http.dart' as http;\n\nFuture<String> fetchOrder() async {\n  final response = await http.get(Uri.parse('https://api.example.com/order/1'));\n\n  if (response.statusCode == 200) {\n    // 成功拿到外卖\n    return response.body;\n  } else {\n    // 订单失败\n    throw Exception('订单失败: ${response.statusCode}');\n  }\n}\n```",
+          "codeExplanation": "白话解说：`http.get(...)` 就是发送订单（GET 请求）。`await` 表示等待外卖送达（等待服务器响应）。`response.statusCode == 200` 表示外卖成功送达（HTTP 状态码 200 代表成功）。",
+          "practice": null,
+          "assessment": null
+        }
+      ]
+    }
+  ]
+}
